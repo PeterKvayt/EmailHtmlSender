@@ -1,0 +1,10 @@
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.exe.config
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.exe
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.pdb
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csprojAssemblyReference.cache
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.Form1.resources
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.Properties.Resources.resources
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.GenerateResource.cache
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.CoreCompileInputs.cache
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.exe
+D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.pdb
