@@ -8,3 +8,12 @@ D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.cs
 D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.CoreCompileInputs.cache
 D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.exe
 D:\Soft\My programs\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.pdb
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.exe.config
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.exe
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\bin\Debug\EmailHtmlSender.pdb
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csprojAssemblyReference.cache
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.Form1.resources
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.Properties.Resources.resources
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.GenerateResource.cache
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.exe
+C:\Users\anton\Desktop\Новая папка\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.pdb

@@ -99,5 +99,10 @@ namespace EmailHtmlSender
                 MessageBox.Show("Emtpy mail");
             }
         }
+
+        private void buttonAddEmail_Click(object sender, EventArgs e)
+        {
+            listBoxEmails.Items.Add(textBox4.Text);
+        }
     }
 }
