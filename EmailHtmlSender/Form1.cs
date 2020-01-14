@@ -17,7 +17,8 @@ namespace EmailHtmlSender
         {
             InitializeComponent();
 
-            openFileDialog1.Filter = "HTML files(*.html)|*.html|All files(*.*)|*.*";
+            openFileDialog1.Filter = "Html files(*.html)|*.html";
+            openFileDialog2.Filter = "Css files(*.css)|*.css";
 
             checkBoxIsHtml.Checked = true;
 
@@ -45,17 +46,7 @@ namespace EmailHtmlSender
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            labelDocumentPath.Text = openFileDialog1.FileName;
-
-            using (FileStream fstream = File.OpenRead(openFileDialog1.FileName))
-            {
-                // преобразуем строку в байты
-                byte[] array = new byte[fstream.Length];
-                // считываем данные
-                fstream.Read(array, 0, array.Length);
-                // декодируем байты в строку
-                tabControl1.TabPages[1].Controls[0].Text = System.Text.Encoding.UTF8.GetString(array);
-            }
+            FillDocs(toolStripLabelHtmlDoc, richTextBoxHtmlDoc, openFileDialog1);
         }
 
         private void buttonShowPassword_Click(object sender, EventArgs e)
@@ -89,7 +80,7 @@ namespace EmailHtmlSender
                         textBoxPassword.Text,
                         textBoxRecipientEmail.Text,
                         textBoxSubject.Text,
-                        richTextBoxDocument.Text,
+                        richTextBoxHtmlDoc.Text,
                         checkBoxIsHtml.Checked,
                         listBoxSmtpClients.SelectedItem.ToString()
                     );
@@ -161,6 +152,31 @@ namespace EmailHtmlSender
             Properties.Settings.Default.SmtpClients.RemoveAt(index);
 
             Properties.Settings.Default.Save();
+        }
+
+        private void FillDocs(ToolStripLabel strip, Control textBox, OpenFileDialog fileDialog)
+        {
+            strip.Text = fileDialog.FileName;
+
+            using (FileStream fstream = File.OpenRead(fileDialog.FileName))
+            {
+                // преобразуем строку в байты
+                byte[] array = new byte[fstream.Length];
+                // считываем данные
+                fstream.Read(array, 0, array.Length);
+                // декодируем байты в строку
+                textBox.Text = Encoding.UTF8.GetString(array);
+            }
+        }
+
+        private void buttonSelectCss_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.ShowDialog();
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+            FillDocs(toolStripLabelCssDoc, richTextBoxCssDoc, openFileDialog2);
         }
     }
 }

@@ -51,14 +51,28 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
+            this.buttonSelectCss = new System.Windows.Forms.Button();
+            this.buttonDelSmtpClient = new System.Windows.Forms.Button();
+            this.buttonDelEmail = new System.Windows.Forms.Button();
             this.buttonShowPassword = new System.Windows.Forms.Button();
             this.tabPageDocument = new System.Windows.Forms.TabPage();
-            this.richTextBoxDocument = new System.Windows.Forms.RichTextBox();
-            this.buttonDelEmail = new System.Windows.Forms.Button();
-            this.buttonDelSmtpClient = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelHtmlDoc = new System.Windows.Forms.ToolStripLabel();
+            this.richTextBoxHtmlDoc = new System.Windows.Forms.RichTextBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelCssDoc = new System.Windows.Forms.ToolStripLabel();
+            this.richTextBoxCssDoc = new System.Windows.Forms.RichTextBox();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSelectHtml
@@ -84,7 +98,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(281, 337);
+            this.buttonSend.Location = new System.Drawing.Point(154, 458);
             this.buttonSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(233, 41);
@@ -262,11 +276,12 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(808, 452);
+            this.tabControl1.Size = new System.Drawing.Size(808, 560);
             this.tabControl1.TabIndex = 20;
             // 
             // tabPageMain
             // 
+            this.tabPageMain.Controls.Add(this.buttonSelectCss);
             this.tabPageMain.Controls.Add(this.buttonDelSmtpClient);
             this.tabPageMain.Controls.Add(this.buttonDelEmail);
             this.tabPageMain.Controls.Add(this.buttonShowPassword);
@@ -294,10 +309,43 @@
             this.tabPageMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageMain.Size = new System.Drawing.Size(800, 423);
+            this.tabPageMain.Size = new System.Drawing.Size(800, 531);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "Main";
             this.tabPageMain.UseVisualStyleBackColor = true;
+            // 
+            // buttonSelectCss
+            // 
+            this.buttonSelectCss.Location = new System.Drawing.Point(247, 337);
+            this.buttonSelectCss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelectCss.Name = "buttonSelectCss";
+            this.buttonSelectCss.Size = new System.Drawing.Size(305, 41);
+            this.buttonSelectCss.TabIndex = 23;
+            this.buttonSelectCss.Text = "Select css document";
+            this.buttonSelectCss.UseVisualStyleBackColor = true;
+            this.buttonSelectCss.Click += new System.EventHandler(this.buttonSelectCss_Click);
+            // 
+            // buttonDelSmtpClient
+            // 
+            this.buttonDelSmtpClient.Location = new System.Drawing.Point(563, 337);
+            this.buttonDelSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelSmtpClient.Name = "buttonDelSmtpClient";
+            this.buttonDelSmtpClient.Size = new System.Drawing.Size(233, 41);
+            this.buttonDelSmtpClient.TabIndex = 22;
+            this.buttonDelSmtpClient.Text = "Delete client";
+            this.buttonDelSmtpClient.UseVisualStyleBackColor = true;
+            this.buttonDelSmtpClient.Click += new System.EventHandler(this.buttonDelSmtpClient_Click);
+            // 
+            // buttonDelEmail
+            // 
+            this.buttonDelEmail.Location = new System.Drawing.Point(8, 337);
+            this.buttonDelEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelEmail.Name = "buttonDelEmail";
+            this.buttonDelEmail.Size = new System.Drawing.Size(233, 41);
+            this.buttonDelEmail.TabIndex = 21;
+            this.buttonDelEmail.Text = "Delete email";
+            this.buttonDelEmail.UseVisualStyleBackColor = true;
+            this.buttonDelEmail.Click += new System.EventHandler(this.buttonDelEmail_Click);
             // 
             // buttonShowPassword
             // 
@@ -312,56 +360,107 @@
             // 
             // tabPageDocument
             // 
-            this.tabPageDocument.Controls.Add(this.richTextBoxDocument);
+            this.tabPageDocument.Controls.Add(this.splitContainer1);
             this.tabPageDocument.Location = new System.Drawing.Point(4, 25);
             this.tabPageDocument.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageDocument.Name = "tabPageDocument";
             this.tabPageDocument.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageDocument.Size = new System.Drawing.Size(800, 423);
+            this.tabPageDocument.Size = new System.Drawing.Size(800, 531);
             this.tabPageDocument.TabIndex = 1;
             this.tabPageDocument.Text = "Document";
             this.tabPageDocument.UseVisualStyleBackColor = true;
             // 
-            // richTextBoxDocument
+            // splitContainer1
             // 
-            this.richTextBoxDocument.BackColor = System.Drawing.Color.Navy;
-            this.richTextBoxDocument.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxDocument.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBoxDocument.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBoxDocument.Location = new System.Drawing.Point(3, 2);
-            this.richTextBoxDocument.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBoxDocument.Name = "richTextBoxDocument";
-            this.richTextBoxDocument.Size = new System.Drawing.Size(794, 419);
-            this.richTextBoxDocument.TabIndex = 0;
-            this.richTextBoxDocument.Text = "";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 2);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // buttonDelEmail
+            // splitContainer1.Panel1
             // 
-            this.buttonDelEmail.Location = new System.Drawing.Point(8, 337);
-            this.buttonDelEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDelEmail.Name = "buttonDelEmail";
-            this.buttonDelEmail.Size = new System.Drawing.Size(233, 41);
-            this.buttonDelEmail.TabIndex = 21;
-            this.buttonDelEmail.Text = "Delete email";
-            this.buttonDelEmail.UseVisualStyleBackColor = true;
-            this.buttonDelEmail.Click += new System.EventHandler(this.buttonDelEmail_Click);
+            this.splitContainer1.Panel1.Controls.Add(this.toolStrip1);
+            this.splitContainer1.Panel1.Controls.Add(this.richTextBoxHtmlDoc);
             // 
-            // buttonDelSmtpClient
+            // splitContainer1.Panel2
             // 
-            this.buttonDelSmtpClient.Location = new System.Drawing.Point(563, 337);
-            this.buttonDelSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDelSmtpClient.Name = "buttonDelSmtpClient";
-            this.buttonDelSmtpClient.Size = new System.Drawing.Size(233, 41);
-            this.buttonDelSmtpClient.TabIndex = 22;
-            this.buttonDelSmtpClient.Text = "Delete client";
-            this.buttonDelSmtpClient.UseVisualStyleBackColor = true;
-            this.buttonDelSmtpClient.Click += new System.EventHandler(this.buttonDelSmtpClient_Click);
+            this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
+            this.splitContainer1.Panel2.Controls.Add(this.richTextBoxCssDoc);
+            this.splitContainer1.Size = new System.Drawing.Size(794, 527);
+            this.splitContainer1.SplitterDistance = 392;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelHtmlDoc});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(392, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabelHtmlDoc
+            // 
+            this.toolStripLabelHtmlDoc.Name = "toolStripLabelHtmlDoc";
+            this.toolStripLabelHtmlDoc.Size = new System.Drawing.Size(0, 22);
+            // 
+            // richTextBoxHtmlDoc
+            // 
+            this.richTextBoxHtmlDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxHtmlDoc.BackColor = System.Drawing.Color.Navy;
+            this.richTextBoxHtmlDoc.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxHtmlDoc.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBoxHtmlDoc.Location = new System.Drawing.Point(0, 27);
+            this.richTextBoxHtmlDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxHtmlDoc.Name = "richTextBoxHtmlDoc";
+            this.richTextBoxHtmlDoc.Size = new System.Drawing.Size(392, 498);
+            this.richTextBoxHtmlDoc.TabIndex = 0;
+            this.richTextBoxHtmlDoc.Text = "";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelCssDoc});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(398, 25);
+            this.toolStrip2.TabIndex = 2;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripLabelCssDoc
+            // 
+            this.toolStripLabelCssDoc.Name = "toolStripLabelCssDoc";
+            this.toolStripLabelCssDoc.Size = new System.Drawing.Size(0, 22);
+            // 
+            // richTextBoxCssDoc
+            // 
+            this.richTextBoxCssDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxCssDoc.BackColor = System.Drawing.Color.Navy;
+            this.richTextBoxCssDoc.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxCssDoc.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBoxCssDoc.Location = new System.Drawing.Point(3, 27);
+            this.richTextBoxCssDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxCssDoc.Name = "richTextBoxCssDoc";
+            this.richTextBoxCssDoc.Size = new System.Drawing.Size(395, 495);
+            this.richTextBoxCssDoc.TabIndex = 1;
+            this.richTextBoxCssDoc.Text = "";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 452);
+            this.ClientSize = new System.Drawing.Size(808, 560);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -370,6 +469,16 @@
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             this.tabPageDocument.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -400,10 +509,18 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageMain;
         private System.Windows.Forms.TabPage tabPageDocument;
-        private System.Windows.Forms.RichTextBox richTextBoxDocument;
+        private System.Windows.Forms.RichTextBox richTextBoxHtmlDoc;
         private System.Windows.Forms.Button buttonShowPassword;
         private System.Windows.Forms.Button buttonDelEmail;
         private System.Windows.Forms.Button buttonDelSmtpClient;
+        private System.Windows.Forms.Button buttonSelectCss;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.RichTextBox richTextBoxCssDoc;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelHtmlDoc;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelCssDoc;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 
