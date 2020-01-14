@@ -54,6 +54,7 @@
             this.buttonShowPassword = new System.Windows.Forms.Button();
             this.tabPageDocument = new System.Windows.Forms.TabPage();
             this.richTextBoxDocument = new System.Windows.Forms.RichTextBox();
+            this.buttonDelEmail = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -64,7 +65,7 @@
             this.buttonSelectHtml.Location = new System.Drawing.Point(247, 292);
             this.buttonSelectHtml.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelectHtml.Name = "buttonSelectHtml";
-            this.buttonSelectHtml.Size = new System.Drawing.Size(220, 41);
+            this.buttonSelectHtml.Size = new System.Drawing.Size(305, 41);
             this.buttonSelectHtml.TabIndex = 0;
             this.buttonSelectHtml.Text = "Select html document";
             this.buttonSelectHtml.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(11, 338);
+            this.buttonSend.Location = new System.Drawing.Point(281, 337);
             this.buttonSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(233, 41);
@@ -267,6 +268,7 @@
             // 
             // tabPageMain
             // 
+            this.tabPageMain.Controls.Add(this.buttonDelEmail);
             this.tabPageMain.Controls.Add(this.buttonShowPassword);
             this.tabPageMain.Controls.Add(this.listBoxEmails);
             this.tabPageMain.Controls.Add(this.listBoxSmtpClients);
@@ -333,6 +335,17 @@
             this.richTextBoxDocument.TabIndex = 0;
             this.richTextBoxDocument.Text = "";
             // 
+            // buttonDelEmail
+            // 
+            this.buttonDelEmail.Location = new System.Drawing.Point(8, 337);
+            this.buttonDelEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelEmail.Name = "buttonDelEmail";
+            this.buttonDelEmail.Size = new System.Drawing.Size(233, 41);
+            this.buttonDelEmail.TabIndex = 21;
+            this.buttonDelEmail.Text = "Delete email";
+            this.buttonDelEmail.UseVisualStyleBackColor = true;
+            this.buttonDelEmail.Click += new System.EventHandler(this.buttonDelEmail_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,6 +391,7 @@
         private System.Windows.Forms.TabPage tabPageDocument;
         private System.Windows.Forms.RichTextBox richTextBoxDocument;
         private System.Windows.Forms.Button buttonShowPassword;
+        private System.Windows.Forms.Button buttonDelEmail;
     }
 }
 

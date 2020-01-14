@@ -26,8 +26,6 @@ namespace EmailHtmlSender
                 listBoxEmails.Items.Add(Properties.Settings.Default.Emails[i].ToString());
             }
 
-
-
             listBoxEmails.SelectedIndex = 0;
 
             listBoxSmtpClients.SelectedIndex = 0;
@@ -122,6 +120,17 @@ namespace EmailHtmlSender
             {
                 MessageBox.Show("Wrong email!");
             }
+        }
+
+        //deletion email
+        private void buttonDelEmail_Click(object sender, EventArgs e)
+        {
+            int index = listBoxEmails.SelectedIndex;
+            listBoxEmails.Items.RemoveAt(index);
+
+            Properties.Settings.Default.Emails.RemoveAt(index);
+
+            Properties.Settings.Default.Save();
         }
     }
 }
