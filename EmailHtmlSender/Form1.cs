@@ -21,9 +21,18 @@ namespace EmailHtmlSender
 
             checkBoxIsHtml.Checked = true;
 
+            for (int i = 0; i < Properties.Settings.Default.Emails.Count; i++)
+            {
+                listBoxEmails.Items.Add(Properties.Settings.Default.Emails[i].ToString());
+            }
+
+
+
             listBoxEmails.SelectedIndex = 0;
 
-            listBoxSmtpClients.SelectedIndex = 1;
+            listBoxSmtpClients.SelectedIndex = 0;
+
+            
         }
 
         private void buttonSelectHtml_Click(object sender, EventArgs e)
@@ -96,13 +105,23 @@ namespace EmailHtmlSender
             }
             else
             {
-                MessageBox.Show("Emtpy mail");
+                MessageBox.Show("Emtpy email");
             }
         }
 
         private void buttonAddEmail_Click(object sender, EventArgs e)
         {
-            listBoxEmails.Items.Add(textBox4.Text);
+            if (!string.IsNullOrEmpty(textBoxNewEmail.Text) && !string.IsNullOrWhiteSpace(textBoxNewEmail.Text) && textBoxNewEmail.Text.Contains("@"))
+            {
+                listBoxEmails.Items.Add(textBoxNewEmail.Text);
+
+                Properties.Settings.Default.Emails.Add(textBoxNewEmail.Text);
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("Wrong email!");
+            }
         }
     }
 }
