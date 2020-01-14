@@ -26,6 +26,11 @@ namespace EmailHtmlSender
                 listBoxEmails.Items.Add(Properties.Settings.Default.Emails[i].ToString());
             }
 
+            for (int i = 0; i < Properties.Settings.Default.SmtpClients.Count; i++)
+            {
+                listBoxSmtpClients.Items.Add(Properties.Settings.Default.SmtpClients[i].ToString());
+            }
+
             listBoxEmails.SelectedIndex = 0;
 
             listBoxSmtpClients.SelectedIndex = 0;
@@ -129,6 +134,31 @@ namespace EmailHtmlSender
             listBoxEmails.Items.RemoveAt(index);
 
             Properties.Settings.Default.Emails.RemoveAt(index);
+
+            Properties.Settings.Default.Save();
+        }
+
+        private void buttonAddSmtpClient_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxNewSmtpClient.Text) && !string.IsNullOrWhiteSpace(textBoxNewSmtpClient.Text) && textBoxNewSmtpClient.Text.Contains("smtp."))
+            {
+                listBoxSmtpClients.Items.Add(textBoxNewSmtpClient.Text);
+
+                Properties.Settings.Default.SmtpClients.Add(textBoxNewSmtpClient.Text);
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("Wrong smtp client!");
+            }
+        }
+
+        private void buttonDelSmtpClient_Click(object sender, EventArgs e)
+        {
+            int index = listBoxSmtpClients.SelectedIndex;
+            listBoxSmtpClients.Items.RemoveAt(index);
+
+            Properties.Settings.Default.SmtpClients.RemoveAt(index);
 
             Properties.Settings.Default.Save();
         }

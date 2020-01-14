@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listBoxSmtpClients = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxNewSmtpClient = new System.Windows.Forms.TextBox();
             this.buttonAddSmtpClient = new System.Windows.Forms.Button();
             this.labelDocumentPath = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -55,6 +55,7 @@
             this.tabPageDocument = new System.Windows.Forms.TabPage();
             this.richTextBoxDocument = new System.Windows.Forms.RichTextBox();
             this.buttonDelEmail = new System.Windows.Forms.Button();
+            this.buttonDelSmtpClient = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -197,17 +198,14 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(559, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
+            this.label6.Size = new System.Drawing.Size(104, 17);
             this.label6.TabIndex = 15;
-            this.label6.Text = "My email";
+            this.label6.Text = "My smtp clients";
             // 
             // listBoxSmtpClients
             // 
             this.listBoxSmtpClients.FormattingEnabled = true;
             this.listBoxSmtpClients.ItemHeight = 16;
-            this.listBoxSmtpClients.Items.AddRange(new object[] {
-            "smtp.gmail.com",
-            "smtp.mail.ru"});
             this.listBoxSmtpClients.Location = new System.Drawing.Point(559, 37);
             this.listBoxSmtpClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxSmtpClients.Name = "listBoxSmtpClients";
@@ -223,13 +221,13 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "New smtp client";
             // 
-            // textBox5
+            // textBoxNewSmtpClient
             // 
-            this.textBox5.Location = new System.Drawing.Point(563, 263);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 22);
-            this.textBox5.TabIndex = 17;
+            this.textBoxNewSmtpClient.Location = new System.Drawing.Point(563, 263);
+            this.textBoxNewSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNewSmtpClient.Name = "textBoxNewSmtpClient";
+            this.textBoxNewSmtpClient.Size = new System.Drawing.Size(233, 22);
+            this.textBoxNewSmtpClient.TabIndex = 17;
             // 
             // buttonAddSmtpClient
             // 
@@ -240,6 +238,7 @@
             this.buttonAddSmtpClient.TabIndex = 16;
             this.buttonAddSmtpClient.Text = "Add client";
             this.buttonAddSmtpClient.UseVisualStyleBackColor = true;
+            this.buttonAddSmtpClient.Click += new System.EventHandler(this.buttonAddSmtpClient_Click);
             // 
             // labelDocumentPath
             // 
@@ -268,6 +267,7 @@
             // 
             // tabPageMain
             // 
+            this.tabPageMain.Controls.Add(this.buttonDelSmtpClient);
             this.tabPageMain.Controls.Add(this.buttonDelEmail);
             this.tabPageMain.Controls.Add(this.buttonShowPassword);
             this.tabPageMain.Controls.Add(this.listBoxEmails);
@@ -286,7 +286,7 @@
             this.tabPageMain.Controls.Add(this.textBoxPassword);
             this.tabPageMain.Controls.Add(this.textBoxNewEmail);
             this.tabPageMain.Controls.Add(this.buttonAddSmtpClient);
-            this.tabPageMain.Controls.Add(this.textBox5);
+            this.tabPageMain.Controls.Add(this.textBoxNewSmtpClient);
             this.tabPageMain.Controls.Add(this.label5);
             this.tabPageMain.Controls.Add(this.label3);
             this.tabPageMain.Controls.Add(this.textBoxRecipientEmail);
@@ -346,6 +346,17 @@
             this.buttonDelEmail.UseVisualStyleBackColor = true;
             this.buttonDelEmail.Click += new System.EventHandler(this.buttonDelEmail_Click);
             // 
+            // buttonDelSmtpClient
+            // 
+            this.buttonDelSmtpClient.Location = new System.Drawing.Point(563, 337);
+            this.buttonDelSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelSmtpClient.Name = "buttonDelSmtpClient";
+            this.buttonDelSmtpClient.Size = new System.Drawing.Size(233, 41);
+            this.buttonDelSmtpClient.TabIndex = 22;
+            this.buttonDelSmtpClient.Text = "Delete client";
+            this.buttonDelSmtpClient.UseVisualStyleBackColor = true;
+            this.buttonDelSmtpClient.Click += new System.EventHandler(this.buttonDelSmtpClient_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,7 +393,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox listBoxSmtpClients;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxNewSmtpClient;
         private System.Windows.Forms.Button buttonAddSmtpClient;
         private System.Windows.Forms.Label labelDocumentPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -392,6 +403,7 @@
         private System.Windows.Forms.RichTextBox richTextBoxDocument;
         private System.Windows.Forms.Button buttonShowPassword;
         private System.Windows.Forms.Button buttonDelEmail;
+        private System.Windows.Forms.Button buttonDelSmtpClient;
     }
 }
 
