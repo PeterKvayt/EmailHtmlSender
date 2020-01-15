@@ -67,8 +67,6 @@ namespace EmailHtmlSender
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-
-
             if (!string.IsNullOrEmpty(textBoxRecipientEmail.Text) || !string.IsNullOrWhiteSpace(textBoxRecipientEmail.Text))
             {
                 if (!string.IsNullOrEmpty(textBoxPassword.Text) || !string.IsNullOrWhiteSpace(textBoxPassword.Text))
@@ -181,7 +179,7 @@ namespace EmailHtmlSender
 
         private void toolStripButtonGetClasses_Click(object sender, EventArgs e)
         {
-            richTextBoxHtmlDoc.Text = DocumentFormatter.ReplaceClasses(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
+            richTextBoxHtmlDoc.Text = DocumentFormatter.ReplaceAttributes(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
 
             //List<CssClass> classes = DocumentFormatter.ReplaceClasses(richTextBoxCssDoc.Text);
 

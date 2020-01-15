@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 
 namespace EmailHtmlSender
 {
-    class DocumentFormatter
+    static class DocumentFormatter
     {
-        public static string ReplaceClasses(string htmlDoc, string cssDoc)
-        {
-            List<CssClass> classes = FindClasses(cssDoc);
 
-            foreach (CssClass item in classes)
+        public static string ReplaceAttributes(string htmlDoc, string cssDoc)
+        {
+            htmlDoc = ReplaceClasses(htmlDoc, cssDoc);
+            return ReplaceIds(htmlDoc, cssDoc);
+        }
+
+        //replace classes 
+        private static string ReplaceClasses(string htmlDoc, string cssDoc)
+        {
+            List<CssAttribute> classes = FindClasses(cssDoc);
+
+            foreach (CssAttribute item in classes)
             {
                 htmlDoc = Replace(htmlDoc, "class=\"" + item.Name + "\"", item.Properties);
             }
@@ -21,28 +29,65 @@ namespace EmailHtmlSender
             return htmlDoc;
         }
 
-        //pickup classes from .css file
-        private static List<CssClass> FindClasses(string cssDoc)
+        //replace ids 
+        private static string ReplaceIds(string htmlDoc, string cssDoc)
         {
-            List<CssClass> classes = new List<CssClass> { };
+            List<CssAttribute> ids = FindId(cssDoc);
+
+            foreach (CssAttribute item in ids)
+            {
+                htmlDoc = Replace(htmlDoc, "id=\"" + item.Name + "\"", item.Properties);
+            }
+
+            return htmlDoc;
+        }
+
+        //pickup classes from .css file
+        private static List<CssAttribute> FindClasses(string cssDoc)
+        {
+            List<CssAttribute> classes = new List<CssAttribute> { };
 
             for (int i = 0; i < cssDoc.Length; i++)
             {
                 string cssClass = "";
                 string style = "";
 
-                GetProperties(ref cssClass, ref style, cssDoc, ref i, CssClass.Tag);
+                GetProperties(ref cssClass, ref style, cssDoc, ref i, CssAttribute.ClassTag);
 
                 if (cssClass != "" & style != "")
                 {
                     style.Replace("\n", "");
                     style.Trim();
 
-                    classes.Add(new CssClass(cssClass, style));
+                    classes.Add(new CssAttribute(cssClass, style));
                 }
             }
 
             return classes;
+        }
+
+        //pickup ids from .css file
+        private static List<CssAttribute> FindId(string cssDoc)
+        {
+            List<CssAttribute> ids = new List<CssAttribute> { };
+
+            for (int i = 0; i < cssDoc.Length; i++)
+            {
+                string id = "";
+                string style = "";
+
+                GetProperties(ref id, ref style, cssDoc, ref i, CssAttribute.IdTag);
+
+                if (id != "" & style != "")
+                {
+                    style.Replace("\n", "");
+                    style.Trim();
+
+                    ids.Add(new CssAttribute(id, style));
+                }
+            }
+
+            return ids;
         }
 
         //return name and properties
@@ -71,7 +116,6 @@ namespace EmailHtmlSender
         {
             style = "style=\"" + style + "\"";
 
-            //string result = regex.Replace(htmlDoc, style);
             return htmlDoc.Replace(name, style);
         }
     }

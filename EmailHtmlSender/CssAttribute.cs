@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace EmailHtmlSender
 {
-    class CssClass
+    class CssAttribute
     {
-        public static string Tag = ".";
+        public static string ClassTag = ".";
+
+        public static string IdTag = "#";
 
         public string Name { get; set; }
 
         public string Properties { get; set; }
 
-        public CssClass(string name, string prop)
+        public CssAttribute(string name, string prop)
         {
             Name = name;
             Properties = prop;
