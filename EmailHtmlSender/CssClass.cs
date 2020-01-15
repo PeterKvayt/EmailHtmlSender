@@ -8,6 +8,8 @@ namespace EmailHtmlSender
 {
     class CssClass
     {
+        public static string Tag = ".";
+
         public string Name { get; set; }
 
         public string Properties { get; set; }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonSelectHtml = new System.Windows.Forms.Button();
             this.listBoxEmails = new System.Windows.Forms.ListBox();
             this.buttonSend = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.toolStripLabelCssDoc = new System.Windows.Forms.ToolStripLabel();
             this.richTextBoxCssDoc = new System.Windows.Forms.RichTextBox();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.toolStripButtonGetClasses = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -424,17 +426,18 @@
             // 
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelCssDoc});
+            this.toolStripLabelCssDoc,
+            this.toolStripButtonGetClasses});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(398, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(398, 27);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripLabelCssDoc
             // 
             this.toolStripLabelCssDoc.Name = "toolStripLabelCssDoc";
-            this.toolStripLabelCssDoc.Size = new System.Drawing.Size(0, 22);
+            this.toolStripLabelCssDoc.Size = new System.Drawing.Size(0, 24);
             // 
             // richTextBoxCssDoc
             // 
@@ -455,6 +458,16 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // toolStripButtonGetClasses
+            // 
+            this.toolStripButtonGetClasses.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonGetClasses.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonGetClasses.Image")));
+            this.toolStripButtonGetClasses.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonGetClasses.Name = "toolStripButtonGetClasses";
+            this.toolStripButtonGetClasses.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonGetClasses.Text = "Get classes";
+            this.toolStripButtonGetClasses.Click += new System.EventHandler(this.toolStripButtonGetClasses_Click);
             // 
             // Form1
             // 
@@ -521,6 +534,7 @@
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabelCssDoc;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonGetClasses;
     }
 }
 

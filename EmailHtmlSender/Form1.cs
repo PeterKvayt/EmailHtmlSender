@@ -178,5 +178,19 @@ namespace EmailHtmlSender
         {
             FillDocs(toolStripLabelCssDoc, richTextBoxCssDoc, openFileDialog2);
         }
+
+        private void toolStripButtonGetClasses_Click(object sender, EventArgs e)
+        {
+            List<CssClass> classes = DocumentFormatter.ReplaceClasses(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
+
+            string classesText = "";
+
+            foreach (CssClass item in classes)
+            {
+                classesText += item.Name + "{\n" + item.Properties + "\n}\n";
+            }
+
+            MessageBox.Show(classesText);
+        }
     }
 }
