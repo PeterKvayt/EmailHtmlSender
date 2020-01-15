@@ -73,7 +73,7 @@ namespace EmailHtmlSender
             {
                 if (!string.IsNullOrEmpty(textBoxPassword.Text) || !string.IsNullOrWhiteSpace(textBoxPassword.Text))
                 {
-                    if (!string.IsNullOrEmpty(labelDocumentPath.Text) || !string.IsNullOrWhiteSpace(labelDocumentPath.Text))
+                    if (!string.IsNullOrEmpty(toolStripLabelHtmlDoc.Text) || !string.IsNullOrWhiteSpace(toolStripLabelHtmlDoc.Text))
                     {
                         Mail mail = new Mail(
                         listBoxEmails.SelectedItem.ToString(),
@@ -181,16 +181,21 @@ namespace EmailHtmlSender
 
         private void toolStripButtonGetClasses_Click(object sender, EventArgs e)
         {
-            List<CssClass> classes = DocumentFormatter.ReplaceClasses(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
+            richTextBoxHtmlDoc.Text = DocumentFormatter.ReplaceClasses(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
 
-            string classesText = "";
+            //List<CssClass> classes = DocumentFormatter.ReplaceClasses(richTextBoxCssDoc.Text);
 
-            foreach (CssClass item in classes)
-            {
-                classesText += item.Name + "{\n" + item.Properties + "\n}\n";
-            }
+            //string classesText = "";
 
-            MessageBox.Show(classesText);
+            //foreach (CssClass item in classes)
+            //{
+            //    item.Properties.Replace("\n", "");
+            //    item.Properties.Trim();
+
+            //    classesText += item.Name + "{" + item.Properties + "}\n";
+            //}
+
+            //MessageBox.Show(classesText);
         }
     }
 }
