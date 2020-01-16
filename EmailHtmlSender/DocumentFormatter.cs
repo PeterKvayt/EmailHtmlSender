@@ -78,7 +78,7 @@ namespace EmailHtmlSender
 
                 GetProperties(ref id, ref style, cssDoc, ref i, CssAttribute.IdTag);
 
-                if (id != "" & style != "")
+                if (id != "" && style != "")
                 {
                     style.Replace("\n", "");
                     style.Trim();
@@ -97,15 +97,30 @@ namespace EmailHtmlSender
             {
                 i++;
 
+                bool isRigth = true;
+
                 while (doc[i].ToString() != "{")
                 {
-                    name += doc[i].ToString();
-                    i++;
+                    if (doc[i].ToString() != ";")
+                    {
+                        name += doc[i].ToString();
+                        i++;
+                    }
+                    else
+                    {
+                        name = "";
+                        isRigth = false;
+                        break;
+                    }
                 }
+
                 i++;
                 while (doc[i].ToString() != "}")
                 {
-                    prop += doc[i].ToString();
+                    if (isRigth)
+                    {
+                        prop += doc[i].ToString();
+                    }
                     i++;
                 }
             }
