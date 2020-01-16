@@ -76,7 +76,7 @@
             this.buttonSelectHtml.Location = new System.Drawing.Point(247, 292);
             this.buttonSelectHtml.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelectHtml.Name = "buttonSelectHtml";
-            this.buttonSelectHtml.Size = new System.Drawing.Size(305, 41);
+            this.buttonSelectHtml.Size = new System.Drawing.Size(233, 41);
             this.buttonSelectHtml.TabIndex = 0;
             this.buttonSelectHtml.Text = "Select html document";
             this.buttonSelectHtml.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(154, 458);
+            this.buttonSend.Location = new System.Drawing.Point(486, 337);
             this.buttonSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(233, 41);
@@ -110,7 +110,7 @@
             this.textBoxRecipientEmail.Location = new System.Drawing.Point(247, 37);
             this.textBoxRecipientEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRecipientEmail.Name = "textBoxRecipientEmail";
-            this.textBoxRecipientEmail.Size = new System.Drawing.Size(305, 22);
+            this.textBoxRecipientEmail.Size = new System.Drawing.Size(357, 22);
             this.textBoxRecipientEmail.TabIndex = 3;
             // 
             // label1
@@ -136,7 +136,7 @@
             this.textBoxSubject.Location = new System.Drawing.Point(247, 91);
             this.textBoxSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSubject.Name = "textBoxSubject";
-            this.textBoxSubject.Size = new System.Drawing.Size(305, 22);
+            this.textBoxSubject.Size = new System.Drawing.Size(357, 22);
             this.textBoxSubject.TabIndex = 5;
             // 
             // label3
@@ -153,7 +153,6 @@
             this.textBoxPassword.Location = new System.Drawing.Point(247, 146);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(199, 22);
             this.textBoxPassword.TabIndex = 7;
             // 
@@ -197,7 +196,7 @@
             // checkBoxIsHtml
             // 
             this.checkBoxIsHtml.AutoSize = true;
-            this.checkBoxIsHtml.Location = new System.Drawing.Point(251, 212);
+            this.checkBoxIsHtml.Location = new System.Drawing.Point(247, 187);
             this.checkBoxIsHtml.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxIsHtml.Name = "checkBoxIsHtml";
             this.checkBoxIsHtml.Size = new System.Drawing.Size(136, 21);
@@ -227,7 +226,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(808, 560);
+            this.tabControl1.Size = new System.Drawing.Size(739, 423);
             this.tabControl1.TabIndex = 20;
             // 
             // tabPageMain
@@ -254,7 +253,7 @@
             this.tabPageMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageMain.Size = new System.Drawing.Size(800, 531);
+            this.tabPageMain.Size = new System.Drawing.Size(731, 394);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "Main";
             this.tabPageMain.UseVisualStyleBackColor = true;
@@ -264,7 +263,7 @@
             this.buttonSelectCss.Location = new System.Drawing.Point(247, 337);
             this.buttonSelectCss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelectCss.Name = "buttonSelectCss";
-            this.buttonSelectCss.Size = new System.Drawing.Size(305, 41);
+            this.buttonSelectCss.Size = new System.Drawing.Size(233, 41);
             this.buttonSelectCss.TabIndex = 23;
             this.buttonSelectCss.Text = "Select css document";
             this.buttonSelectCss.UseVisualStyleBackColor = true;
@@ -286,9 +285,9 @@
             this.buttonShowPassword.Location = new System.Drawing.Point(451, 145);
             this.buttonShowPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonShowPassword.Name = "buttonShowPassword";
-            this.buttonShowPassword.Size = new System.Drawing.Size(101, 25);
+            this.buttonShowPassword.Size = new System.Drawing.Size(136, 31);
             this.buttonShowPassword.TabIndex = 20;
-            this.buttonShowPassword.Text = "Show pass";
+            this.buttonShowPassword.Text = "Show password";
             this.buttonShowPassword.UseVisualStyleBackColor = true;
             this.buttonShowPassword.Click += new System.EventHandler(this.buttonShowPassword_Click);
             // 
@@ -405,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 560);
+            this.ClientSize = new System.Drawing.Size(739, 423);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";

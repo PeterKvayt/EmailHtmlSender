@@ -17,6 +17,8 @@ namespace EmailHtmlSender
         {
             InitializeComponent();
 
+            textBoxPassword.UseSystemPasswordChar = true;
+
             openFileDialog1.Filter = "Html files(*.html)|*.html";
             openFileDialog2.Filter = "Css files(*.css)|*.css";
 
@@ -49,18 +51,18 @@ namespace EmailHtmlSender
 
         private void buttonShowPassword_Click(object sender, EventArgs e)
         {
-            //if (buttonShowPassword.Text == "Show pass")
-            //{
-            //    buttonShowPassword.Text = "Hide pass";
-            //    //textBoxPassword.PasswordChar = Convert.ToChar(" );
-            //}
-            //else
-            //{
-            //    textBoxPassword.PasswordChar = '*';
-            //    buttonShowPassword.Text = "Show pass";
-            //}
+            if (buttonShowPassword.Text == "Show password")
+            {
+                buttonShowPassword.Text = "Hide password";
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                buttonShowPassword.Text = "Show password";
+            }
 
-            
+
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
