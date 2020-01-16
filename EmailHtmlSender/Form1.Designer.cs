@@ -43,17 +43,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNewEmail = new System.Windows.Forms.TextBox();
             this.checkBoxIsHtml = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.listBoxSmtpClients = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxNewSmtpClient = new System.Windows.Forms.TextBox();
-            this.buttonAddSmtpClient = new System.Windows.Forms.Button();
             this.labelDocumentPath = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.buttonSelectCss = new System.Windows.Forms.Button();
-            this.buttonDelSmtpClient = new System.Windows.Forms.Button();
             this.buttonDelEmail = new System.Windows.Forms.Button();
             this.buttonShowPassword = new System.Windows.Forms.Button();
             this.tabPageDocument = new System.Windows.Forms.TabPage();
@@ -63,9 +57,9 @@
             this.richTextBoxHtmlDoc = new System.Windows.Forms.RichTextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelCssDoc = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButtonGetClasses = new System.Windows.Forms.ToolStripButton();
             this.richTextBoxCssDoc = new System.Windows.Forms.RichTextBox();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripButtonGetClasses = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -209,53 +203,6 @@
             this.checkBoxIsHtml.Text = "Is html document";
             this.checkBoxIsHtml.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(559, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "My smtp clients";
-            // 
-            // listBoxSmtpClients
-            // 
-            this.listBoxSmtpClients.FormattingEnabled = true;
-            this.listBoxSmtpClients.ItemHeight = 16;
-            this.listBoxSmtpClients.Location = new System.Drawing.Point(559, 37);
-            this.listBoxSmtpClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxSmtpClients.Name = "listBoxSmtpClients";
-            this.listBoxSmtpClients.Size = new System.Drawing.Size(233, 196);
-            this.listBoxSmtpClients.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(563, 244);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 17);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "New smtp client";
-            // 
-            // textBoxNewSmtpClient
-            // 
-            this.textBoxNewSmtpClient.Location = new System.Drawing.Point(563, 263);
-            this.textBoxNewSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNewSmtpClient.Name = "textBoxNewSmtpClient";
-            this.textBoxNewSmtpClient.Size = new System.Drawing.Size(233, 22);
-            this.textBoxNewSmtpClient.TabIndex = 17;
-            // 
-            // buttonAddSmtpClient
-            // 
-            this.buttonAddSmtpClient.Location = new System.Drawing.Point(563, 292);
-            this.buttonAddSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAddSmtpClient.Name = "buttonAddSmtpClient";
-            this.buttonAddSmtpClient.Size = new System.Drawing.Size(233, 41);
-            this.buttonAddSmtpClient.TabIndex = 16;
-            this.buttonAddSmtpClient.Text = "Add client";
-            this.buttonAddSmtpClient.UseVisualStyleBackColor = true;
-            this.buttonAddSmtpClient.Click += new System.EventHandler(this.buttonAddSmtpClient_Click);
-            // 
             // labelDocumentPath
             // 
             this.labelDocumentPath.AutoSize = true;
@@ -284,26 +231,20 @@
             // tabPageMain
             // 
             this.tabPageMain.Controls.Add(this.buttonSelectCss);
-            this.tabPageMain.Controls.Add(this.buttonDelSmtpClient);
             this.tabPageMain.Controls.Add(this.buttonDelEmail);
             this.tabPageMain.Controls.Add(this.buttonShowPassword);
             this.tabPageMain.Controls.Add(this.listBoxEmails);
-            this.tabPageMain.Controls.Add(this.listBoxSmtpClients);
             this.tabPageMain.Controls.Add(this.labelDocumentPath);
             this.tabPageMain.Controls.Add(this.textBoxSubject);
             this.tabPageMain.Controls.Add(this.buttonSelectHtml);
             this.tabPageMain.Controls.Add(this.label2);
             this.tabPageMain.Controls.Add(this.label4);
-            this.tabPageMain.Controls.Add(this.label6);
-            this.tabPageMain.Controls.Add(this.label7);
             this.tabPageMain.Controls.Add(this.checkBoxIsHtml);
             this.tabPageMain.Controls.Add(this.buttonAddEmail);
             this.tabPageMain.Controls.Add(this.label1);
             this.tabPageMain.Controls.Add(this.buttonSend);
             this.tabPageMain.Controls.Add(this.textBoxPassword);
             this.tabPageMain.Controls.Add(this.textBoxNewEmail);
-            this.tabPageMain.Controls.Add(this.buttonAddSmtpClient);
-            this.tabPageMain.Controls.Add(this.textBoxNewSmtpClient);
             this.tabPageMain.Controls.Add(this.label5);
             this.tabPageMain.Controls.Add(this.label3);
             this.tabPageMain.Controls.Add(this.textBoxRecipientEmail);
@@ -326,17 +267,6 @@
             this.buttonSelectCss.Text = "Select css document";
             this.buttonSelectCss.UseVisualStyleBackColor = true;
             this.buttonSelectCss.Click += new System.EventHandler(this.buttonSelectCss_Click);
-            // 
-            // buttonDelSmtpClient
-            // 
-            this.buttonDelSmtpClient.Location = new System.Drawing.Point(563, 337);
-            this.buttonDelSmtpClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDelSmtpClient.Name = "buttonDelSmtpClient";
-            this.buttonDelSmtpClient.Size = new System.Drawing.Size(233, 41);
-            this.buttonDelSmtpClient.TabIndex = 22;
-            this.buttonDelSmtpClient.Text = "Delete client";
-            this.buttonDelSmtpClient.UseVisualStyleBackColor = true;
-            this.buttonDelSmtpClient.Click += new System.EventHandler(this.buttonDelSmtpClient_Click);
             // 
             // buttonDelEmail
             // 
@@ -439,6 +369,16 @@
             this.toolStripLabelCssDoc.Name = "toolStripLabelCssDoc";
             this.toolStripLabelCssDoc.Size = new System.Drawing.Size(0, 24);
             // 
+            // toolStripButtonGetClasses
+            // 
+            this.toolStripButtonGetClasses.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonGetClasses.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonGetClasses.Image")));
+            this.toolStripButtonGetClasses.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonGetClasses.Name = "toolStripButtonGetClasses";
+            this.toolStripButtonGetClasses.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonGetClasses.Text = "Get classes";
+            this.toolStripButtonGetClasses.Click += new System.EventHandler(this.toolStripButtonGetClasses_Click);
+            // 
             // richTextBoxCssDoc
             // 
             this.richTextBoxCssDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -458,16 +398,6 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
-            // 
-            // toolStripButtonGetClasses
-            // 
-            this.toolStripButtonGetClasses.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonGetClasses.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonGetClasses.Image")));
-            this.toolStripButtonGetClasses.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonGetClasses.Name = "toolStripButtonGetClasses";
-            this.toolStripButtonGetClasses.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonGetClasses.Text = "Get classes";
-            this.toolStripButtonGetClasses.Click += new System.EventHandler(this.toolStripButtonGetClasses_Click);
             // 
             // Form1
             // 
@@ -512,11 +442,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxNewEmail;
         private System.Windows.Forms.CheckBox checkBoxIsHtml;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBoxSmtpClients;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxNewSmtpClient;
-        private System.Windows.Forms.Button buttonAddSmtpClient;
         private System.Windows.Forms.Label labelDocumentPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -525,7 +450,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxHtmlDoc;
         private System.Windows.Forms.Button buttonShowPassword;
         private System.Windows.Forms.Button buttonDelEmail;
-        private System.Windows.Forms.Button buttonDelSmtpClient;
         private System.Windows.Forms.Button buttonSelectCss;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.RichTextBox richTextBoxCssDoc;

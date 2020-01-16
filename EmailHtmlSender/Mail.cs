@@ -15,13 +15,8 @@ namespace EmailHtmlSender
 
         private MailMessage message;
 
-        public Mail(string from, string password, string to, string subject, string body, bool isHtml, string smtp)
+        public Mail(string from, string password, string to, string subject, string body, bool isHtml)
         {
-
-            // отправитель - устанавливаем адрес и отображаемое в письме имя
-            //MailAddress From = new MailAddress(from);
-            //// кому отправляем
-            //MailAddress To = new MailAddress(to);
             // создаем объект сообщения
             message = new MailMessage(from, to);
             // тема письма
@@ -33,16 +28,12 @@ namespace EmailHtmlSender
             // адрес smtp-сервера и порт, с которого будем отправлять письмо
             client = new SmtpClient
             {
-                Host = smtp,
+                Host = "smtp." + from.Split('@')[1],
                 Port = 25,
                 EnableSsl = true,
                 Credentials = new NetworkCredential(from, password),
                 DeliveryMethod = SmtpDeliveryMethod.Network
             };
-            //client.DeliveryMethod = new SmtpDeliveryMethod();
-            //client.Credentials = new NetworkCredential(from, password);
-            //client.EnableSsl = true;
-
         }
 
         public void Send()

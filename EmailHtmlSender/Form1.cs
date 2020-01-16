@@ -27,16 +27,7 @@ namespace EmailHtmlSender
                 listBoxEmails.Items.Add(Properties.Settings.Default.Emails[i].ToString());
             }
 
-            for (int i = 0; i < Properties.Settings.Default.SmtpClients.Count; i++)
-            {
-                listBoxSmtpClients.Items.Add(Properties.Settings.Default.SmtpClients[i].ToString());
-            }
-
             listBoxEmails.SelectedIndex = 0;
-
-            listBoxSmtpClients.SelectedIndex = 0;
-
-            
         }
 
         private void buttonSelectHtml_Click(object sender, EventArgs e)
@@ -79,8 +70,7 @@ namespace EmailHtmlSender
                         textBoxRecipientEmail.Text,
                         textBoxSubject.Text,
                         richTextBoxHtmlDoc.Text,
-                        checkBoxIsHtml.Checked,
-                        listBoxSmtpClients.SelectedItem.ToString()
+                        checkBoxIsHtml.Checked
                     );
 
                         mail.Send();
@@ -127,31 +117,6 @@ namespace EmailHtmlSender
             Properties.Settings.Default.Save();
         }
 
-        private void buttonAddSmtpClient_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(textBoxNewSmtpClient.Text) && !string.IsNullOrWhiteSpace(textBoxNewSmtpClient.Text) && textBoxNewSmtpClient.Text.Contains("smtp."))
-            {
-                listBoxSmtpClients.Items.Add(textBoxNewSmtpClient.Text);
-
-                Properties.Settings.Default.SmtpClients.Add(textBoxNewSmtpClient.Text);
-                Properties.Settings.Default.Save();
-            }
-            else
-            {
-                MessageBox.Show("Wrong smtp client!");
-            }
-        }
-
-        private void buttonDelSmtpClient_Click(object sender, EventArgs e)
-        {
-            int index = listBoxSmtpClients.SelectedIndex;
-            listBoxSmtpClients.Items.RemoveAt(index);
-
-            Properties.Settings.Default.SmtpClients.RemoveAt(index);
-
-            Properties.Settings.Default.Save();
-        }
-
         private void FillDocs(ToolStripLabel strip, Control textBox, OpenFileDialog fileDialog)
         {
             strip.Text = fileDialog.FileName;
@@ -180,20 +145,6 @@ namespace EmailHtmlSender
         private void toolStripButtonGetClasses_Click(object sender, EventArgs e)
         {
             richTextBoxHtmlDoc.Text = DocumentFormatter.ReplaceAttributes(richTextBoxHtmlDoc.Text, richTextBoxCssDoc.Text);
-
-            //List<CssClass> classes = DocumentFormatter.ReplaceClasses(richTextBoxCssDoc.Text);
-
-            //string classesText = "";
-
-            //foreach (CssClass item in classes)
-            //{
-            //    item.Properties.Replace("\n", "");
-            //    item.Properties.Trim();
-
-            //    classesText += item.Name + "{" + item.Properties + "}\n";
-            //}
-
-            //MessageBox.Show(classesText);
         }
     }
 }
