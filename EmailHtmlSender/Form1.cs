@@ -28,6 +28,13 @@ namespace EmailHtmlSender
             }
 
             listBoxEmails.SelectedIndex = 0;
+
+            int count = Properties.Settings.Default.LastRecipients.Count >= 5 ? 5 : Properties.Settings.Default.LastRecipients.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                textBoxRecipientEmail.AutoCompleteCustomSource.Add(Properties.Settings.Default.LastRecipients[i]);
+            }
         }
 
         private void buttonSelectHtml_Click(object sender, EventArgs e)
@@ -74,6 +81,11 @@ namespace EmailHtmlSender
                     );
 
                         mail.Send();
+
+                        Properties.Settings.Default.LastRecipients.Add(textBoxRecipientEmail.Text);
+                        Properties.Settings.Default.Save();
+
+                        textBoxRecipientEmail.AutoCompleteCustomSource.Add(textBoxRecipientEmail.Text);
                     }
                     else
                     {

@@ -105,6 +105,8 @@
             // 
             // textBoxRecipientEmail
             // 
+            this.textBoxRecipientEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxRecipientEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxRecipientEmail.Location = new System.Drawing.Point(247, 37);
             this.textBoxRecipientEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRecipientEmail.Name = "textBoxRecipientEmail";
