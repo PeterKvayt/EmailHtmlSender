@@ -59,9 +59,9 @@
             this.toolStripLabelCssDoc = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonGetClasses = new System.Windows.Forms.ToolStripButton();
             this.richTextBoxCssDoc = new System.Windows.Forms.RichTextBox();
-            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.tabPagePreview = new System.Windows.Forms.TabPage();
-            this.webBrowserPreview = new System.Windows.Forms.WebBrowser();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.webBrowserPreview = new WebKit.WebKitBrowser();
             this.tabControl.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -421,11 +421,6 @@
             this.richTextBoxCssDoc.TabIndex = 1;
             this.richTextBoxCssDoc.Text = "";
             // 
-            // openFileDialog2
-            // 
-            this.openFileDialog2.FileName = "openFileDialog2";
-            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
-            // 
             // tabPagePreview
             // 
             this.tabPagePreview.Controls.Add(this.webBrowserPreview);
@@ -437,14 +432,20 @@
             this.tabPagePreview.Text = "Preview";
             this.tabPagePreview.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
             // webBrowserPreview
             // 
+            this.webBrowserPreview.BackColor = System.Drawing.Color.White;
             this.webBrowserPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowserPreview.Location = new System.Drawing.Point(3, 3);
-            this.webBrowserPreview.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserPreview.Name = "webBrowserPreview";
             this.webBrowserPreview.Size = new System.Drawing.Size(725, 388);
             this.webBrowserPreview.TabIndex = 0;
+            this.webBrowserPreview.Url = null;
             // 
             // Form1
             // 
@@ -509,7 +510,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.ToolStripButton toolStripButtonGetClasses;
         private System.Windows.Forms.TabPage tabPagePreview;
-        private System.Windows.Forms.WebBrowser webBrowserPreview;
+        private WebKit.WebKitBrowser webBrowserPreview;
     }
 }
 

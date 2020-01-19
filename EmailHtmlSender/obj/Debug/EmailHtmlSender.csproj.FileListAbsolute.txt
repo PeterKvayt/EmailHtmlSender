@@ -27,3 +27,7 @@ D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHt
 D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.CoreCompileInputs.cache
 D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.exe
 D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.pdb
+D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\bin\Debug\WebKitBrowser.dll
+D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\bin\Debug\WebKit.Interop.dll
+D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\bin\Debug\stdole.dll
+D:\MyDirectory\GitRepositories\EmailHtmlSender\EmailHtmlSender\obj\Debug\EmailHtmlSender.csproj.CopyComplete
