@@ -47,10 +47,6 @@ namespace EmailHtmlSender
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             FillDocs(toolStripLabelHtmlDoc, richTextBoxHtmlDoc, openFileDialog1);
-
-            //webBrowserPreview.
-
-            webBrowserPreview.DocumentText = richTextBoxHtmlDoc.Text;
         }
 
         private void buttonShowPassword_Click(object sender, EventArgs e)

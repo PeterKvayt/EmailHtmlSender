@@ -59,9 +59,7 @@
             this.toolStripLabelCssDoc = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonGetClasses = new System.Windows.Forms.ToolStripButton();
             this.richTextBoxCssDoc = new System.Windows.Forms.RichTextBox();
-            this.tabPagePreview = new System.Windows.Forms.TabPage();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.webBrowserPreview = new WebKit.WebKitBrowser();
             this.tabControl.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -71,7 +69,6 @@
             this.splitContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            this.tabPagePreview.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSelectHtml
@@ -243,7 +240,6 @@
             // 
             this.tabControl.Controls.Add(this.tabPageMain);
             this.tabControl.Controls.Add(this.tabPageDocument);
-            this.tabControl.Controls.Add(this.tabPagePreview);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -421,31 +417,10 @@
             this.richTextBoxCssDoc.TabIndex = 1;
             this.richTextBoxCssDoc.Text = "";
             // 
-            // tabPagePreview
-            // 
-            this.tabPagePreview.Controls.Add(this.webBrowserPreview);
-            this.tabPagePreview.Location = new System.Drawing.Point(4, 25);
-            this.tabPagePreview.Name = "tabPagePreview";
-            this.tabPagePreview.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePreview.Size = new System.Drawing.Size(731, 394);
-            this.tabPagePreview.TabIndex = 2;
-            this.tabPagePreview.Text = "Preview";
-            this.tabPagePreview.UseVisualStyleBackColor = true;
-            // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
-            // 
-            // webBrowserPreview
-            // 
-            this.webBrowserPreview.BackColor = System.Drawing.Color.White;
-            this.webBrowserPreview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowserPreview.Location = new System.Drawing.Point(3, 3);
-            this.webBrowserPreview.Name = "webBrowserPreview";
-            this.webBrowserPreview.Size = new System.Drawing.Size(725, 388);
-            this.webBrowserPreview.TabIndex = 0;
-            this.webBrowserPreview.Url = null;
             // 
             // Form1
             // 
@@ -471,7 +446,6 @@
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.tabPagePreview.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -509,8 +483,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelCssDoc;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.ToolStripButton toolStripButtonGetClasses;
-        private System.Windows.Forms.TabPage tabPagePreview;
-        private WebKit.WebKitBrowser webBrowserPreview;
     }
 }
 
